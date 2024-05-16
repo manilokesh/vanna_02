@@ -40,6 +40,6 @@ prompt_content = prompt_content.replace("##ME##", config_data.get("user-me"))
 #gsql = vn.generate_sql("medicaid cases opened in last 5 years")
 #gsql = vn.generate_sql("persons with bad address")
 #gsql = vn.generate_sql("cases that are assigned to Senthil")
-gsql = vn.generate_sql(prompt_content+ sys.argv[1])
+gsql = vn.generate_sql(prompt_content + "\n\nUser Question: "+ sys.argv[1])
 print(gsql) 
 
